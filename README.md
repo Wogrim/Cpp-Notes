@@ -43,7 +43,7 @@ so run it in the terminal via
 
 # Funky Features of C++
 
-- compiled to assembly for specific hardware; needs to be compiled differently for some systems
+- compiled to assembly for specific hardware; needs to be compiled differently for special systems
 - arrays and other collections are homogeneous; they only allow one data type
 - able to overload operators to work with whatever data types you like (even your own classes)
 
@@ -53,11 +53,21 @@ so run it in the terminal via
   - you must declare variables with a type before you can use them
 - variables are statically typed
   - you can't change the type of a variable after you declare it
-- you can *initialize* a variable by assigning a value to it when it is declared
-- variables can be declared **const** which prevents them from being changed
+- you can *initialize* a variable by ASSIGNing a value to it when it is declared
+  - `int health = 100;`
+- variables can be declared **const** which prevents them from being changed (recommended)
   - specifically you'll get a compiler error if you try to change it
+- variable names ("identifiers") can contain letters, underscores, digits, can't start with a digit
+  - convention: don't start with uppercase letter
+- universal (more or less) operators, which result in a boolean
+- `x == y`
+  - EQUALS
+- `x != y`
+  - NOT EQUALS
 
 ## primitives
+
+- some different types can be implicitly cast to each other
 
 ### numbers
 
@@ -78,13 +88,54 @@ integer types are whole numbers, which can be preceded by **unsigned** to not al
 
 float types are fractional numbers
 - **float** is lower-precision
-  - float f = 5f / 3;
+  - `float f = 5f / 3;`
   - **f** at the end of literals for it to be treated as float instead of int
 - **double** is higher-precision
 
+incrementing and decrementing a number variable
+- `x++` or `++x`
+  - these are expressions to increase x by 1, which can be used as part of a larger statement
+    - the former returns the pre-incremented value of x, the latter the post-incremented value
+- `x--` or `--x`
+  - similar for decreasing by 1
+- `x += 5;` and `x -= 5;`
+  - shorthand for `x = x + 5;` and `x = x - 5;` respectively
+  - there is also *= /= %=
+
+comparison operators work on numbers and result in a boolean
+- `x > 5`
+  - GREATER THAN
+- `x >= 5`
+  - GREATER THAN OR EQUAL TO
+- `x < 5`
+  - LESS THAN
+- `x <= 5`
+  - LESS THAN OR EQUAL TO
+
 ### booleans
 
-booleans are true or false values
+booleans are true or false values, requiring boo
 
-`boolean has_money = false;`
+```
+bool has_money = false;
+bool has_time = true;
+```
+
+the following operators work on booleans (and result in a boolean)
+- `! has_money`
+  - NOT
+- `has_money && has_time`
+  - AND
+- `has_money || has_time`
+  - OR
+
+universal (more or less) operators that result in a boolean
+- `x == y`
+  - EQUALS
+- `x != y`
+  - NOT EQUALS
+
+### strings
+
+- strings are sequences of characters, but they're really just objects underneath
 
