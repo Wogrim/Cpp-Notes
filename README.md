@@ -79,7 +79,7 @@ integer types are whole numbers, which can be preceded by **unsigned** to not al
   - `int i = 0;`
   - -2 billion to + 2 billion, or unsigned is 0 to 4 billion
 - **long** is 64-bit (use when int is too small)
-  - `long x = 50000000L * 10000L;
+  - `long x = 50000000L * 10000L;`
   - L at the end of literals to treat as long to avoid int overflow
 - division with integer types does integer division
   - `int wholes = 100 / 17;`
@@ -114,11 +114,12 @@ comparison operators work on numbers and result in a boolean
 
 ### booleans
 
-booleans are true or false values, requiring boo
-
+booleans are true or false values
+- non-zero numbers can be implicitly cast to true, and zero is implicitly cast to false
+  - generally makes the code harder to read, recommend using an appropriate operator instead
 ```
 bool has_money = false;
-bool has_time = true;
+bool has_time = 5;
 ```
 
 the following operators work on booleans (and result in a boolean)
