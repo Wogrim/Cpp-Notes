@@ -60,10 +60,10 @@ so run it in the terminal via
 - variable names ("identifiers") can contain letters, underscores, digits, can't start with a digit
   - convention: don't start with uppercase letter
 - universal (more or less) operators, which result in a boolean
-- `x == y`
-  - EQUALS
-- `x != y`
-  - NOT EQUALS
+  - `x == y`
+    - EQUALS
+  - `x != y`
+    - NOT EQUALS
 
 ## primitives
 
@@ -80,7 +80,7 @@ integer types are whole numbers, which can be preceded by **unsigned** to not al
   - -2 billion to + 2 billion, or unsigned is 0 to 4 billion
 - **long** is 64-bit (use when int is too small)
   - `long x = 50000000L * 10000L;`
-  - L at the end of literals to treat as long to avoid int overflow
+  - 'L' at the end of literals to treat as long to avoid int overflow on very large numbers
 - division with integer types does integer division
   - `int wholes = 100 / 17;`
 - modular division to get the remainder
@@ -89,7 +89,7 @@ integer types are whole numbers, which can be preceded by **unsigned** to not al
 float types are fractional numbers
 - **float** is lower-precision
   - `float f = 5f / 3;`
-  - **f** at the end of literals for it to be treated as float instead of int
+  - 'f' at the end of literals for it to be treated as float instead of int
 - **double** is higher-precision
 
 incrementing and decrementing a number variable
@@ -100,7 +100,7 @@ incrementing and decrementing a number variable
   - similar for decreasing by 1
 - `x += 5;` and `x -= 5;`
   - shorthand for `x = x + 5;` and `x = x - 5;` respectively
-  - there is also *= /= %=
+  - there is also `*=` and `/=` and `%=` for multiplication, division, and modular division
 
 comparison operators work on numbers and result in a boolean
 - `x > 5`
@@ -129,12 +129,6 @@ the following operators work on booleans (and result in a boolean)
   - AND
 - `has_money || has_time`
   - OR
-
-universal (more or less) operators that result in a boolean
-- `x == y`
-  - EQUALS
-- `x != y`
-  - NOT EQUALS
 
 ### strings
 
